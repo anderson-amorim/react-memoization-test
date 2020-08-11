@@ -9,19 +9,19 @@ const App: React.FC = () => {
   const obj = useMemo(() => ({ id: 1, value: "123" }), []);
   return (
     <div className="App">
-      <MemoComponent obj={obj} onLoad= />
+      <MemoComponent obj={obj} value={password} />
       <label htmlFor="username">Username: </label>
-      <input name="usename" onChange={evt => setUsername(evt.target.value)} />
+      <input name="usename" onChange={(evt) => setUsername(evt.target.value)} />
       <br />
       <label htmlFor="password">Password: </label>
       <input
         name="password"
         type="password"
-        onChange={evt => setPassword(evt.target.value)}
+        onChange={(evt) => setPassword(evt.target.value)}
       />
       <br />
       <label htmlFor="2fauth">2F Auth: </label>
-      <input name="2fauth" onChange={evt => seAuth(evt.target.value)} />
+      <input name="2fauth" onChange={(evt) => seAuth(evt.target.value)} />
       <br />
     </div>
   );
